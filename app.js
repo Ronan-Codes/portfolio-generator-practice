@@ -19,22 +19,30 @@
 // printProfileDate(profileDataArgs)
 
 // ==========================================================
-const fs = require('fs');
-const generatePage = require('./src/page-template.js');
 
-// normally, it would be (lengt-1)
-const profileDataArgs = process.argv.slice(2, process.argv.length);
-// same as below
-// const name = profileDataArgs[0];
-// const github = profileDataArgs[1];
-const [name, github] = profileDataArgs;
+const inquirer = require('inquirer');
+// const fs = require('fs');
+// const generatePage = require('./src/page-template.js');
 
-// 1st argument is file name, 2nd is data being written, 3rd is callback function that will handle any errors/success message
-fs.writeFile('index.html', generatePage(name, github), err => {
-    // throw err creates an exception and stops the execution of the code
-    if (err) throw err;
+// const pageHTML = generatePage(name, github);
 
-    console.log("Porfolio complete! Check out index.html to see the output!");
+// // 1st argument is file name, 2nd is data being written, 3rd is callback function that will handle any errors/success message
+// fs.writeFile('index.html', generatePage(name, github), err => {
+//     // throw err creates an exception and stops the execution of the code
+//     if (err) throw err;
 
-    // insert fs.open?
-});
+//     console.log("Porfolio complete! Check out index.html to see the output!");
+
+//     // insert fs.open?
+// });
+
+// array of object known as question object 
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?'
+        }
+    ])
+    .then(answers => console.log(answers));

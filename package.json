@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronan-Codes/portfolio-generator-practice.git"
+  },
+  "author": "Ronan-Codes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ronan-Codes/portfolio-generator-practice/issues"
+  },
+  "homepage": "https://github.com/Ronan-Codes/portfolio-generator-practice#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
